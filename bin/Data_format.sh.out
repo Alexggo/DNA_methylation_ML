@@ -1,0 +1,17 @@
+WARNING: pandas/1.1.4 cannot be loaded due to a conflict.
+HINT: Might try "module unload tensorflow2-gpu" first.
+NOTE: These modules conflict because they both load Anaconda environments.
+/gpfs/software/Anaconda3/bin/python
+Traceback (most recent call last):
+  File "/gpfs/software/Anaconda3/lib/python3.6/site-packages/pandas/__init__.py", line 25, in <module>
+    from pandas import hashtable, tslib, lib
+ImportError: cannot import name 'hashtable' from 'pandas' (/gpfs/software/Anaconda3/lib/python3.6/site-packages/pandas/__init__.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "bin/methylation_project_BEE690.py", line 2, in <module>
+    import pandas as pd
+  File "/gpfs/software/Anaconda3/lib/python3.6/site-packages/pandas/__init__.py", line 31, in <module>
+    "the C extensions first.".format(module))
+ImportError: C extension: 'hashtable' from 'pandas' (/gpfs/software/Anaconda3/lib/python3.6/site-packages/pandas/__init__.py) not built. If you want to import pandas from the source directory, you may need to run 'python setup.py build_ext --inplace --force' to build the C extensions first.

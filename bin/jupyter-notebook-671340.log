@@ -1,0 +1,26 @@
+
+Command to create ssh tunnel:
+ssh -N -f -L 1335:cn015:1335 agilgomez@login.seawulf.stonybrook.edu
+
+Use a Browser on your local machine to go to:
+localhost:1335
+WARNING: $PATH does not agree with $PATH_modshare counter. The following directories' usage counters were adjusted to match. Note that this may mean that module unloading may not work correctly.
+ /gpfs/home/agilgomez/miniconda3/bin
+Traceback (most recent call last):
+  File "/gpfs/software/Anaconda3/bin/jupyter-notebook", line 7, in <module>
+    from notebook.notebookapp import main
+  File "/gpfs/software/Anaconda3/lib/python3.6/site-packages/notebook/notebookapp.py", line 42, in <module>
+    from zmq.eventloop import ioloop
+  File "/gpfs/software/Anaconda3/lib/python3.6/site-packages/zmq/__init__.py", line 34, in <module>
+    from zmq import backend
+  File "/gpfs/software/Anaconda3/lib/python3.6/site-packages/zmq/backend/__init__.py", line 40, in <module>
+    reraise(*exc_info)
+  File "/gpfs/software/Anaconda3/lib/python3.6/site-packages/zmq/utils/sixcerpt.py", line 34, in reraise
+    raise value
+  File "/gpfs/software/Anaconda3/lib/python3.6/site-packages/zmq/backend/__init__.py", line 27, in <module>
+    _ns = select_backend(first)
+  File "/gpfs/software/Anaconda3/lib/python3.6/site-packages/zmq/backend/select.py", line 26, in select_backend
+    mod = __import__(name, fromlist=public_api)
+  File "/gpfs/software/Anaconda3/lib/python3.6/site-packages/zmq/backend/cython/__init__.py", line 6, in <module>
+    from . import (constants, error, message, context,
+ImportError: cannot import name 'constants' from 'zmq.backend.cython' (/gpfs/software/Anaconda3/lib/python3.6/site-packages/zmq/backend/cython/__init__.py)
