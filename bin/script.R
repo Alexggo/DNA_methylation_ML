@@ -29,8 +29,8 @@ x_test <- shuffled_data[526:656,3:437037] #20%, CpG data
 y_test <- shuffled_data[5256:656,1] #labels
 
 #Ages.
-y_train <- to_categorical(y_train, 2) 
-y_test <- to_categorical(y_test, 2)
+#y_train <- to_categorical(y_train, 2) 
+#y_test <- to_categorical(y_test, 2)
 
 #Define the model
 model <- keras_model_sequential() 
@@ -63,12 +63,3 @@ plot(history)
 model %>% evaluate(x_test, y_test)
 
 model %>% predict_classes(x_test)
-
-
-
-
-
-
-
-
-
